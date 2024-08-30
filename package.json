@@ -1,0 +1,9 @@
+{
+  "name": "desafio-js",
+  "version": "1.0.0",
+  "description": "Desafios feitos em Js",
+  "main": "index.js",
+  "author": "Leonardo Adami",
+  "license": "MIT",
+  "type": "module"
+}
