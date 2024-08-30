@@ -5,24 +5,36 @@
 // • ES – R$27.165,48
 // • Outros – R$19.849,53
 
-// Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado teve dentro do valor total mensal da distribuidora.  
+// Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado teve dentro do valor total mensal da distribuidora. 
+ 
+/**
+ * Calculates the percentage of a given value in relation to a total value.
+ *
+ * @param {number} faturamento - The value to calculate the percentage for.
+ * @param {number} totalFaturamento - The total value used as a reference.
+ * @return {number} The calculated percentage.
+ */
+function calculaPercentual(faturamento, totalFaturamento) {
+    return (faturamento / totalFaturamento) * 100;
+}
 
-let faturamentoSP = 67836.43;
-let faturamentoRJ = 36678.66;
-let faturamentoMG = 29229.88;
-let faturamentoES = 27165.48;
-let faturamentoOutros = 19849.53;
+const faturamentoSP = 67836.43;
+const faturamentoRJ = 36678.66;
+const faturamentoMG = 29229.88;
+const faturamentoES = 27165.48;
+const faturamentoOutros = 19849.53;
 
-let totalFaturamento = faturamentoSP + faturamentoRJ + faturamentoMG + faturamentoES + faturamentoOutros;
+const totalFaturamento = faturamentoSP + faturamentoRJ + faturamentoMG + faturamentoES + faturamentoOutros;
 
-let percentualSP = (faturamentoSP / totalFaturamento) * 100;
-let percentualRJ = (faturamentoRJ / totalFaturamento) * 100;
-let percentualMG = (faturamentoMG / totalFaturamento) * 100;
-let percentualES = (faturamentoES / totalFaturamento) * 100;
-let percentualOutros = (faturamentoOutros / totalFaturamento) * 100;
+const percentualSP = calculaPercentual(faturamentoSP, totalFaturamento);
+const percentualRJ = calculaPercentual(faturamentoRJ, totalFaturamento);
+const percentualMG = calculaPercentual(faturamentoMG, totalFaturamento);
+const percentualES = calculaPercentual(faturamentoES, totalFaturamento);
+const percentualOutros = calculaPercentual(faturamentoOutros, totalFaturamento);
 
-console.log(`Percentual de representação de SP: ${percentualSP.toFixed(2)}%`);
-console.log(`Percentual de representação de RJ: ${percentualRJ.toFixed(2)}%`);
-console.log(`Percentual de representação de MG: ${percentualMG.toFixed(2)}%`);
-console.log(`Percentual de representação de ES: ${percentualES.toFixed(2)}%`);
-console.log(`Percentual de representação de outros: ${percentualOutros.toFixed(2)}%`);
+console.log(`Total faturado: R$${totalFaturamento.toFixed(2)}`);
+console.log(`Percentual SP: ${percentualSP.toFixed(2)}%`);
+console.log(`Percentual RJ: ${percentualRJ.toFixed(2)}%`);
+console.log(`Percentual MG: ${percentualMG.toFixed(2)}%`);
+console.log(`Percentual ES: ${percentualES.toFixed(2)}%`);
+console.log(`Percentual Outros: ${percentualOutros.toFixed(2)}%`);
